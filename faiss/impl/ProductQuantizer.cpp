@@ -65,6 +65,7 @@ void ProductQuantizer::set_derived_values() {
     ksub = 1 << nbits;
     centroids.resize(d * ksub);
     verbose = false;
+    // verbose = true;
     train_type = Train_default;
 }
 
@@ -489,13 +490,13 @@ void ProductQuantizer::compute_distance_tables(
 
         for (int m = 0; m < M; m++) {
             pairwise_L2sqr(
-                    dsub,
-                    nx,
-                    x + dsub * m,
-                    ksub,
-                    centroids.data() + m * dsub * ksub,
-                    dis_tables + ksub * m,
-                    d,
+                    dsub,                                  // subvector dimension
+                    nx,                                    // number of query
+                    x + dsub * m,                          // query vector pointer
+                    ksub,                                  // number of centroids
+                    centroids.data() + m * dsub * ksub,    // centroids vector pointer  
+                    dis_tables + ksub * m,                 // distance table 
+                    d,                                  
                     dsub,
                     ksub * M);
         }

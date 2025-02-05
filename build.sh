@@ -7,7 +7,7 @@ BUILD_DIR="build_debug"
 # Configure CMake
 echo "[INFO] Configuring CMake..."
 cmake -B $BUILD_DIR \
-      -DBUILD_TESTING=ON \
+      -DBUILD_TESTING=OFF \
       -DBUILD_SHARED_LIBS=ON \
       -DFAISS_ENABLE_GPU=OFF \
       -DFAISS_ENABLE_RAFT=OFF \

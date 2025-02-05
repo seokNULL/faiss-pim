@@ -43,6 +43,8 @@ int main() {
     faiss::IndexFlatL2 quantizer(d); // the other index
     faiss::IndexIVFPQ index(&quantizer, d, nlist, m, 8);
 
+    index.verbose = true;
+
     index.train(nb, xb);
     index.add(nb, xb);
 
@@ -74,7 +76,7 @@ int main() {
         idx_t* I = new idx_t[k * nq];
         float* D = new float[k * nq];
 
-        index.nprobe = 10;
+        index.nprobe = 10; //Number of clusters a query retrives
         index.search(nq, xq, k, D, I);
 
         printf("I=\n");

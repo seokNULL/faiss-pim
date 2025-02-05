@@ -1133,12 +1133,12 @@ void knn_L2sqr_by_idx(
 }
 
 void pairwise_L2sqr(
-        int64_t d,
-        int64_t nq,
-        const float* xq,
-        int64_t nb,
-        const float* xb,
-        float* dis,
+        int64_t d,        // subvector dimension      
+        int64_t nq,       // number of query      
+        const float* xq,  // query vector pointer              
+        int64_t nb,       // number of centroids      
+        const float* xb,  // centroids vector pointer                
+        float* dis,       // distance table       
         int64_t ldq,
         int64_t ldb,
         int64_t ldd) {
@@ -1151,12 +1151,47 @@ void pairwise_L2sqr(
     if (ldd == -1)
         ldd = nb;
 
-    // store in beginning of distance matrix to avoid malloc
-    float* b_norms = dis;
+    printf(
+        "Function Name: %s\n"
+        "=================================\n"
+        "Parameters:\n"
+        "  d    = %d\n"
+        "  nq   = %d\n"
+        "  xq   = %p\n"
+        "  nb   = %d\n"
+        "  xb   = %p\n"
+        "  dis  = %p\n"
+        "  ldq  = %d\n"
+        "  ldb  = %d\n"
+        "  ldd  = %d\n"
+        "=================================\n",
+        __func__, d, nq, static_cast<const void*>(xq), nb,
+        static_cast<const void*>(xb), static_cast<void*>(dis),
+        ldq, ldb, ldd
+    );
 
+
+    // store in beginning of distance matrix to avoid malloc
+/* [DEBUG]*/    
+    printf("Query Vector\n");
+    for(int64_t i=0; i<nq; i++){
+        printf("xq[%d]=%.4f\n", i, xq[i]);
+    }
+    printf("Centroids Vector\n");
+    for(int64_t i=0; i<nb; i++){
+        printf("xb[%d]=%.4f\n", i, xb[i]);
+    }
+
+    float* b_norms = dis;
 #pragma omp parallel for if (nb > 1)
     for (int64_t i = 0; i < nb; i++)
         b_norms[i] = fvec_norm_L2sqr(xb + i * ldb, d);
+
+/* [DEBUG]*/
+    printf("step A. \n");
+    for(int64_t i=0; i<nb; i++){
+        printf("b_norms[%d]=%.4f\n", i, b_norms[i]);
+    }
 
 #pragma omp parallel for
     for (int64_t i = 1; i < nq; i++) {
@@ -1165,10 +1200,24 @@ void pairwise_L2sqr(
             dis[i * ldd + j] = q_norm + b_norms[j];
     }
 
+/* [DEBUG]*/
+    printf("step B. \n");
+    for (int64_t i = 1; i < nq; i++) {
+        for (int64_t j = 0; j < nb; j++){
+            printf("dis[%d]=%.4f\n", i, dis[i * ldd + j]);
+        }
+    }
+
     {
         float q_norm = fvec_norm_L2sqr(xq, d);
         for (int64_t j = 0; j < nb; j++)
             dis[j] += q_norm;
+    }
+
+/* [DEBUG]*/
+    printf("step C. \n");
+    for(int64_t i=0; i<nb; i++){
+        printf("dis[%d]=%.4f\n", i, dis[i]);
     }
 
     {
