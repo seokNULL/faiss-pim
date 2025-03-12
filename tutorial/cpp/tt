@@ -1,0 +1,2608 @@
+Index is trained? false
+Index is trained? true
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fa600
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fa640
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fa680
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fa6c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fa700
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fa740
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fa780
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 1024
+  xq   = 0x7f3fc3151390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fa7c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fa600
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fa640
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fa680
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fa6c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fa700
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fa740
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fa780
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3110390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fa7c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112c10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fa600
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112c90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fa640
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112d10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fa680
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112d90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fa6c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112e10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fa700
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112e90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fa740
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112f10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fa780
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3112f90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fa7c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fb670
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fb6b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fb6f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fb730
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115a10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fb770
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115a90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fb7b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115b10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fb7f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3115b90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fb830
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fbeb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fbef0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fbf30
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fbf70
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fbfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fbff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fc030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3118790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fc070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fc6f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fc730
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fc770
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fc7b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fc7f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fc830
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fc870
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311b390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fc8b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311dc10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fcf30
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311dc90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fcf70
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311dd10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fcfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311dd90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fcff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311de10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fd030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311de90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fd070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311df10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fd0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc311df90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fd0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fd770
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fd7b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fd7f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fd830
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120a10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fd870
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120a90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fd8b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120b10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fd8f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3120b90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fd930
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3123790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3126390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128c10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128c90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128d10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128d90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128e10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128e90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128f10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3128f90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312b810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312b890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312b910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312b990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312ba10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312ba90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312bb10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312bb90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc312e790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3131390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133c10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133c90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133d10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133d90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133e10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133e90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133f10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3133f90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136a10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136a90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136b10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3136b90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3139790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313c390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ec10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ec90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ed10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ed90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ee10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ee90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ef10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc313ef90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141a10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141a90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141b10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3141b90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3144790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147010
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147090
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147110
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147190
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147210
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147290
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147310
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3147390
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149c10
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149c90
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149d10
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149d90
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149e10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149e90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149f10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc3149f90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314c810
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fdfb0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314c890
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fdff0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314c910
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fe030
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314c990
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fe070
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314ca10
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fe0b0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314ca90
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fe0f0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314cb10
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fe130
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 11
+  xq   = 0x7f3fc314cb90
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fe170
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f410
+  nb   = 16
+  xb   = 0x56539a1ec360
+  dis  = 0x56539a1fa600
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f490
+  nb   = 16
+  xb   = 0x56539a1ecb60
+  dis  = 0x56539a1fa640
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f510
+  nb   = 16
+  xb   = 0x56539a1ed360
+  dis  = 0x56539a1fa680
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f590
+  nb   = 16
+  xb   = 0x56539a1edb60
+  dis  = 0x56539a1fa6c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f610
+  nb   = 16
+  xb   = 0x56539a1ee360
+  dis  = 0x56539a1fa700
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f690
+  nb   = 16
+  xb   = 0x56539a1eeb60
+  dis  = 0x56539a1fa740
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f710
+  nb   = 16
+  xb   = 0x56539a1ef360
+  dis  = 0x56539a1fa780
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+Function Name: pairwise_L2sqr
+=================================
+Parameters:
+  d    = 32
+  nq   = 3
+  xq   = 0x7f3fc314f790
+  nb   = 16
+  xb   = 0x56539a1efb60
+  dis  = 0x56539a1fa7c0
+  ldq  = 256
+  ldb  = 32
+  ldd  = 128
+=================================
+I=
+  864   602   677   968 
+  715   740   128   359 
+  414   676   378   235 
+  788   587   993   732 
+  954    73   472   751 
