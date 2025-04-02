@@ -122,6 +122,7 @@ struct IndexPQStats {
     size_t ncode; // nb of codes visited
 
     size_t n_hamming_pass; // nb of passed Hamming distance tests (for polysemy)
+    
 
     IndexPQStats() {
         reset();

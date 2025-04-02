@@ -76,7 +76,6 @@ int main() {
     }
 
     // Using an IVF index
-
     int nlist = 100;
     faiss::gpu::GpuIndexIVFFlat index_ivf(&res, d, nlist, faiss::METRIC_L2);
 

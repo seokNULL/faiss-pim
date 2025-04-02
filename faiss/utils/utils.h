@@ -37,6 +37,7 @@ std::string get_compile_options();
  * Get some stats about the system
  **************************************************/
 
+
 // Expose Faiss version as a string
 std::string get_version();
 

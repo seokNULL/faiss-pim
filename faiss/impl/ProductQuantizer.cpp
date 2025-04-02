@@ -6,6 +6,7 @@
  */
 
 // -*- c++ -*-
+#define CPU_PERF_BREAKDOWN
 
 #include <faiss/impl/ProductQuantizer.h>
 
@@ -20,6 +21,7 @@
 #include <faiss/VectorTransform.h>
 #include <faiss/impl/FaissAssert.h>
 #include <faiss/utils/distances.h>
+#include <faiss/utils/utils.h>
 
 extern "C" {
 
@@ -621,33 +623,64 @@ void pq_estimators_from_tables(
         size_t k,
         float* heap_dis,
         int64_t* heap_ids) {
-    if (pq.M == 4) {
-        pq_estimators_from_tables_M4<CT, C>(
-                codes, ncodes, dis_table, pq.ksub, k, heap_dis, heap_ids);
-        return;
-    }
 
-    if (pq.M % 4 == 0) {
-        pq_estimators_from_tables_Mmul4<CT, C>(
-                pq.M, codes, ncodes, dis_table, pq.ksub, k, heap_dis, heap_ids);
-        return;
-    }
-
-    /* Default is relatively slow */
     const size_t M = pq.M;
     const size_t ksub = pq.ksub;
+
     for (size_t j = 0; j < ncodes; j++) {
         float dis = 0;
         const float* __restrict dt = dis_table;
+
         for (int m = 0; m < M; m++) {
             dis += dt[*codes++];
             dt += ksub;
         }
+
         if (C::cmp(heap_dis[0], dis)) {
             heap_replace_top<C>(k, heap_dis, heap_ids, dis, j);
         }
+
     }
 }
+
+template <typename CT, class C>
+void pq_estimators_from_tables(
+        const ProductQuantizer& pq,
+        const CT* codes,
+        size_t ncodes,
+        const float* dis_table,
+        size_t k,
+        float* heap_dis,
+        int64_t* heap_ids,
+        double* tLookupPQcodes,
+        double* tKnnSort) {
+
+
+    const size_t M = pq.M;
+    const size_t ksub = pq.ksub;
+
+    double LookupPQStart, LookupPQEnd, KnnStart, KnnEnd;        
+
+    for (size_t j = 0; j < ncodes; j++) {
+        float dis = 0;
+        const float* __restrict dt = dis_table;
+        LookupPQStart = getmillisecs();
+        for (int m = 0; m < M; m++) {
+            dis += dt[*codes++];
+            dt += ksub;
+        }
+        LookupPQEnd = getmillisecs();
+        *tLookupPQcodes += (LookupPQEnd - LookupPQStart) / 1000.0;
+
+        KnnStart = getmillisecs();
+        if (C::cmp(heap_dis[0], dis)) {
+            heap_replace_top<C>(k, heap_dis, heap_ids, dis, j);
+        }
+        KnnEnd = getmillisecs();
+        *tKnnSort += (KnnEnd - KnnStart) / 1000.0;
+    }
+}
+
 
 template <class C>
 void pq_estimators_from_tables_generic(
@@ -738,6 +771,75 @@ void pq_knn_search_with_tables(
     }
 }
 
+template <class C>
+void pq_knn_search_with_tables(
+        const ProductQuantizer& pq,
+        size_t nbits,
+        const float* dis_tables,
+        const uint8_t* codes,
+        const size_t ncodes,
+        HeapArray<C>* res,
+        bool init_finalize_heap, 
+        double* tLookupPQcodes, 
+        double* tKnnSort
+        ) {
+    size_t k = res->k, nx = res->nh;
+    size_t ksub = pq.ksub, M = pq.M;
+    double t0, t1;
+
+    for (int64_t i = 0; i < nx; i++) {
+        /* query preparation for asymmetric search: compute look-up tables */
+    t0 = getmillisecs();
+        const float* dis_table = dis_tables + i * ksub * M;
+
+        /* Compute distances and keep smallest values */
+        int64_t* __restrict heap_ids = res->ids + i * k;
+        float* __restrict heap_dis = res->val + i * k;
+    if (init_finalize_heap) {
+            heap_heapify<C>(k, heap_dis, heap_ids);
+        }
+    t1 = getmillisecs();
+      *tKnnSort += (t1 - t0) / 1000.0;
+
+        switch (nbits) {
+            case 8:
+                // pq_estimators_from_tables<uint8_t, C>(
+                //         pq, codes, ncodes, dis_table, k, heap_dis, heap_ids);
+                pq_estimators_from_tables<uint8_t, C>(
+                        pq, codes, ncodes, dis_table, k, heap_dis, heap_ids, tLookupPQcodes, tKnnSort);
+                break;
+            case 16:
+                pq_estimators_from_tables<uint16_t, C>(
+                        pq,
+                        (uint16_t*)codes,
+                        ncodes,
+                        dis_table,
+                        k,
+                        heap_dis,
+                        heap_ids);
+                break;
+            default:
+                pq_estimators_from_tables_generic<C>(
+                        pq,
+                        nbits,
+                        codes,
+                        ncodes,
+                        dis_table,
+                        k,
+                        heap_dis,
+                        heap_ids);
+                break;
+        }
+
+        t0 = getmillisecs();
+        if (init_finalize_heap) {
+            heap_reorder<C>(k, heap_dis, heap_ids);
+        }
+        t1 = getmillisecs();        
+        *tKnnSort += (t1 - t0) / 1000.0;
+  }
+}
+
 } // anonymous namespace
 
 void ProductQuantizer::search(
@@ -748,9 +850,20 @@ void ProductQuantizer::search(
         float_maxheap_array_t* res,
         bool init_finalize_heap) const {
     FAISS_THROW_IF_NOT(nx == res->nh);
+#ifdef CPU_PERF_BREAKDOWN  
+  double GenDisTableStart, GenDisTableEnd;
+  double tGenDisTab, tLookupPQ, tKnnsort;
+    tGenDisTab = 0,0;
+    tLookupPQ = 0.0;
+    tKnnsort = 0.0;
+
+  GenDisTableStart = getmillisecs();
+#endif
     std::unique_ptr<float[]> dis_tables(new float[nx * ksub * M]);
     compute_distance_tables(nx, x, dis_tables.get());
+    GenDisTableEnd = getmillisecs();
 
+#ifdef CPU_PERF_BREAKDOWN
     pq_knn_search_with_tables<CMax<float, int64_t>>(
             *this,
             nbits,
@@ -758,7 +871,29 @@ void ProductQuantizer::search(
             codes,
             ncodes,
             res,
-            init_finalize_heap);
+            init_finalize_heap,
+            &tLookupPQ,
+            &tKnnsort);
+#endif    
+    // pq_knn_search_with_tables<CMax<float, int64_t>>(
+    //         *this,
+    //         nbits,
+    //         dis_tables.get(),
+    //         codes,
+    //         ncodes,
+    //         res,
+    //         init_finalize_heap
+    //         );    
+#ifdef CPU_PERF_BREAKDOWN            
+    tGenDisTab = (GenDisTableEnd - GenDisTableStart);
+
+    printf("[Execution Time Breakdowns]\n"
+           "tGenDisTab(ms): %.4f\n"
+           "tLookupPQ(ms): %.4f\n"
+           "tKnnsort(ms): %.4f\n",
+           tGenDisTab, tLookupPQ, tKnnsort
+           );
+#endif
 }
 
 void ProductQuantizer::search_ip(

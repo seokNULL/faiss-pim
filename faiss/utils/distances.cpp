@@ -1150,80 +1150,25 @@ void pairwise_L2sqr(
         ldb = d;
     if (ldd == -1)
         ldd = nb;
-
-    printf(
-        "Function Name: %s\n"
-        "=================================\n"
-        "Parameters:\n"
-        "  d    = %d\n"
-        "  nq   = %d\n"
-        "  xq   = %p\n"
-        "  nb   = %d\n"
-        "  xb   = %p\n"
-        "  dis  = %p\n"
-        "  ldq  = %d\n"
-        "  ldb  = %d\n"
-        "  ldd  = %d\n"
-        "=================================\n",
-        __func__, d, nq, static_cast<const void*>(xq), nb,
-        static_cast<const void*>(xb), static_cast<void*>(dis),
-        ldq, ldb, ldd
-    );
-
-
     // store in beginning of distance matrix to avoid malloc
-/* [DEBUG]*/    
-    printf("Query Vector\n");
-    for(int64_t i=0; i<nq; i++){
-        printf("xq[%d]=%.4f\n", i, xq[i]);
-    }
-    printf("Centroids Vector\n");
-    for(int64_t i=0; i<nb; i++){
-        printf("xb[%d]=%.4f\n", i, xb[i]);
-    }
-
     float* b_norms = dis;
 #pragma omp parallel for if (nb > 1)
     for (int64_t i = 0; i < nb; i++)
         b_norms[i] = fvec_norm_L2sqr(xb + i * ldb, d);
-
-/* [DEBUG]*/
-    printf("step A. \n");
-    for(int64_t i=0; i<nb; i++){
-        printf("b_norms[%d]=%.4f\n", i, b_norms[i]);
-    }
-
 #pragma omp parallel for
     for (int64_t i = 1; i < nq; i++) {
         float q_norm = fvec_norm_L2sqr(xq + i * ldq, d);
         for (int64_t j = 0; j < nb; j++)
             dis[i * ldd + j] = q_norm + b_norms[j];
     }
-
-/* [DEBUG]*/
-    printf("step B. \n");
-    for (int64_t i = 1; i < nq; i++) {
-        for (int64_t j = 0; j < nb; j++){
-            printf("dis[%d]=%.4f\n", i, dis[i * ldd + j]);
-        }
-    }
-
     {
         float q_norm = fvec_norm_L2sqr(xq, d);
         for (int64_t j = 0; j < nb; j++)
             dis[j] += q_norm;
     }
-
-/* [DEBUG]*/
-    printf("step C. \n");
-    for(int64_t i=0; i<nb; i++){
-        printf("dis[%d]=%.4f\n", i, dis[i]);
-    }
-
     {
         FINTEGER nbi = nb, nqi = nq, di = d, ldqi = ldq, ldbi = ldb, lddi = ldd;
         float one = 1.0, minus_2 = -2.0;
-
         sgemm_("Transposed",
                "Not transposed",
                &nbi,

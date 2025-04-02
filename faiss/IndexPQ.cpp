@@ -182,9 +182,11 @@ void IndexPQ::search(
         indexPQ_stats.nq += n;
         indexPQ_stats.ncode += n * ntotal;
 
-    } else if (
+    } 
+    else if (
             param_search_type == ST_polysemous ||
-            param_search_type == ST_polysemous_generalize) {
+            param_search_type == ST_polysemous_generalize) 
+        {
         FAISS_THROW_IF_NOT(metric_type == METRIC_L2);
         int param_polysemous_ht =
                 params ? params->polysemous_ht : this->polysemous_ht;
@@ -197,7 +199,8 @@ void IndexPQ::search(
                 param_polysemous_ht,
                 param_search_type == ST_polysemous_generalize);
 
-    } else { // code-to-code distances
+    } else 
+    { // code-to-code distances
 
         std::unique_ptr<uint8_t[]> q_codes(new uint8_t[n * pq.code_size]);
 

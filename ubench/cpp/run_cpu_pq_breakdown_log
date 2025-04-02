@@ -1,0 +1,1092 @@
+=============================================
+Running experiments with NB=1048576
+=============================================
+[NB=1048576] >>> NQ=1 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1199
+tLookupPQ(ms): 0.0305
+tKnnsort(ms): 0.0188
+Average QPS over 1 runs: 10.36
+[NB=1048576] >>> NQ=1 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1130
+tLookupPQ(ms): 0.0301
+tKnnsort(ms): 0.0191
+Average QPS over 1 runs: 10.37
+[NB=1048576] >>> NQ=1 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1130
+tLookupPQ(ms): 0.0304
+tKnnsort(ms): 0.0188
+Average QPS over 1 runs: 10.40
+[NB=1048576] >>> NQ=1 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1182
+tLookupPQ(ms): 0.0314
+tKnnsort(ms): 0.0183
+Average QPS over 1 runs: 10.17
+[NB=1048576] >>> NQ=1 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1140
+tLookupPQ(ms): 0.0299
+tKnnsort(ms): 0.0187
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=2 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1221
+tLookupPQ(ms): 0.0602
+tKnnsort(ms): 0.0364
+Average QPS over 1 runs: 10.39
+[NB=1048576] >>> NQ=2 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1379
+tLookupPQ(ms): 0.0596
+tKnnsort(ms): 0.0369
+Average QPS over 1 runs: 10.40
+[NB=1048576] >>> NQ=2 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1250
+tLookupPQ(ms): 0.0595
+tKnnsort(ms): 0.0375
+Average QPS over 1 runs: 10.43
+[NB=1048576] >>> NQ=2 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1208
+tLookupPQ(ms): 0.0592
+tKnnsort(ms): 0.0371
+Average QPS over 1 runs: 10.53
+[NB=1048576] >>> NQ=2 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1318
+tLookupPQ(ms): 0.0600
+tKnnsort(ms): 0.0369
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=4 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1431
+tLookupPQ(ms): 0.1191
+tKnnsort(ms): 0.0753
+Average QPS over 1 runs: 10.42
+[NB=1048576] >>> NQ=4 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1370
+tLookupPQ(ms): 0.1203
+tKnnsort(ms): 0.0760
+Average QPS over 1 runs: 10.45
+[NB=1048576] >>> NQ=4 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1389
+tLookupPQ(ms): 0.1208
+tKnnsort(ms): 0.0763
+Average QPS over 1 runs: 10.45
+[NB=1048576] >>> NQ=4 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1401
+tLookupPQ(ms): 0.1193
+tKnnsort(ms): 0.0753
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=4 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1411
+tLookupPQ(ms): 0.1205
+tKnnsort(ms): 0.0757
+Average QPS over 1 runs: 10.42
+[NB=1048576] >>> NQ=8 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1741
+tLookupPQ(ms): 0.2396
+tKnnsort(ms): 0.1504
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=8 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1709
+tLookupPQ(ms): 0.2364
+tKnnsort(ms): 0.1489
+Average QPS over 1 runs: 10.52
+[NB=1048576] >>> NQ=8 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1802
+tLookupPQ(ms): 0.2402
+tKnnsort(ms): 0.1500
+Average QPS over 1 runs: 10.45
+[NB=1048576] >>> NQ=8 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1731
+tLookupPQ(ms): 0.2383
+tKnnsort(ms): 0.1492
+Average QPS over 1 runs: 10.51
+[NB=1048576] >>> NQ=8 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1741
+tLookupPQ(ms): 0.2390
+tKnnsort(ms): 0.1503
+Average QPS over 1 runs: 10.48
+[NB=1048576] >>> NQ=16 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2390
+tLookupPQ(ms): 0.4773
+tKnnsort(ms): 0.2979
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=16 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2522
+tLookupPQ(ms): 0.4808
+tKnnsort(ms): 0.3025
+Average QPS over 1 runs: 10.44
+[NB=1048576] >>> NQ=16 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 346.5300
+tLookupPQ(ms): 0.4847
+tKnnsort(ms): 0.3052
+Average QPS over 1 runs: 8.47
+[NB=1048576] >>> NQ=16 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2532
+tLookupPQ(ms): 0.4756
+tKnnsort(ms): 0.2995
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=16 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2500
+tLookupPQ(ms): 0.4769
+tKnnsort(ms): 0.3014
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=32 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3879
+tLookupPQ(ms): 0.9496
+tKnnsort(ms): 0.5934
+Average QPS over 1 runs: 10.51
+[NB=1048576] >>> NQ=32 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3909
+tLookupPQ(ms): 0.9514
+tKnnsort(ms): 0.5978
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=32 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 13.5850
+tLookupPQ(ms): 0.9579
+tKnnsort(ms): 0.6049
+Average QPS over 1 runs: 10.39
+[NB=1048576] >>> NQ=32 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3921
+tLookupPQ(ms): 0.9600
+tKnnsort(ms): 0.6015
+Average QPS over 1 runs: 10.45
+[NB=1048576] >>> NQ=32 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3921
+tLookupPQ(ms): 0.9547
+tKnnsort(ms): 0.6011
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=64 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4180
+tLookupPQ(ms): 1.9018
+tKnnsort(ms): 1.1950
+Average QPS over 1 runs: 10.50
+[NB=1048576] >>> NQ=64 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4209
+tLookupPQ(ms): 1.9118
+tKnnsort(ms): 1.2096
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=64 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4202
+tLookupPQ(ms): 1.9078
+tKnnsort(ms): 1.1947
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=64 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4202
+tLookupPQ(ms): 1.9106
+tKnnsort(ms): 1.1984
+Average QPS over 1 runs: 10.49
+[NB=1048576] >>> NQ=64 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4189
+tLookupPQ(ms): 1.9168
+tKnnsort(ms): 1.2109
+Average QPS over 1 runs: 10.44
+[NB=1048576] >>> NQ=128 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 335.6350
+tLookupPQ(ms): 3.8450
+tKnnsort(ms): 2.4402
+Average QPS over 1 runs: 10.17
+[NB=1048576] >>> NQ=128 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7310
+tLookupPQ(ms): 3.8593
+tKnnsort(ms): 2.4279
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=128 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7190
+tLookupPQ(ms): 3.8043
+tKnnsort(ms): 2.3741
+Average QPS over 1 runs: 10.45
+[NB=1048576] >>> NQ=128 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7271
+tLookupPQ(ms): 3.8475
+tKnnsort(ms): 2.4318
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=128 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7991
+tLookupPQ(ms): 3.8335
+tKnnsort(ms): 2.4208
+Average QPS over 1 runs: 10.47
+[NB=1048576] >>> NQ=256 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.2310
+tLookupPQ(ms): 7.6576
+tKnnsort(ms): 4.8235
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=256 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 2.4619
+tLookupPQ(ms): 7.6594
+tKnnsort(ms): 4.8303
+Average QPS over 1 runs: 10.44
+[NB=1048576] >>> NQ=256 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.2480
+tLookupPQ(ms): 7.6536
+tKnnsort(ms): 4.8022
+Average QPS over 1 runs: 10.49
+[NB=1048576] >>> NQ=256 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.2222
+tLookupPQ(ms): 7.6691
+tKnnsort(ms): 4.8599
+Average QPS over 1 runs: 10.46
+[NB=1048576] >>> NQ=256 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 329.0200
+tLookupPQ(ms): 7.6815
+tKnnsort(ms): 4.8657
+Average QPS over 1 runs: 10.30
+=============================================
+Running experiments with NB=2097152
+=============================================
+[NB=2097152] >>> NQ=1 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1240
+tLookupPQ(ms): 0.0594
+tKnnsort(ms): 0.0374
+Average QPS over 1 runs: 5.19
+[NB=2097152] >>> NQ=1 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1169
+tLookupPQ(ms): 0.0590
+tKnnsort(ms): 0.0369
+Average QPS over 1 runs: 5.21
+[NB=2097152] >>> NQ=1 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 332.6592
+tLookupPQ(ms): 0.0604
+tKnnsort(ms): 0.0378
+Average QPS over 1 runs: 1.91
+[NB=2097152] >>> NQ=1 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1160
+tLookupPQ(ms): 0.0593
+tKnnsort(ms): 0.0374
+Average QPS over 1 runs: 5.19
+[NB=2097152] >>> NQ=1 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1160
+tLookupPQ(ms): 0.0604
+tKnnsort(ms): 0.0383
+Average QPS over 1 runs: 5.21
+[NB=2097152] >>> NQ=2 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1189
+tLookupPQ(ms): 0.1201
+tKnnsort(ms): 0.0745
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=2 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1270
+tLookupPQ(ms): 0.1187
+tKnnsort(ms): 0.0755
+Average QPS over 1 runs: 5.20
+[NB=2097152] >>> NQ=2 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1350
+tLookupPQ(ms): 0.1192
+tKnnsort(ms): 0.0754
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=2 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1201
+tLookupPQ(ms): 0.1196
+tKnnsort(ms): 0.0752
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=2 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1221
+tLookupPQ(ms): 0.1198
+tKnnsort(ms): 0.0755
+Average QPS over 1 runs: 5.20
+[NB=2097152] >>> NQ=4 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1531
+tLookupPQ(ms): 0.2391
+tKnnsort(ms): 0.1495
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=4 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1479
+tLookupPQ(ms): 0.2351
+tKnnsort(ms): 0.1522
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=4 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1499
+tLookupPQ(ms): 0.2384
+tKnnsort(ms): 0.1483
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=4 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.6780
+tLookupPQ(ms): 0.2364
+tKnnsort(ms): 0.1483
+Average QPS over 1 runs: 5.27
+[NB=2097152] >>> NQ=4 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1501
+tLookupPQ(ms): 0.2374
+tKnnsort(ms): 0.1514
+Average QPS over 1 runs: 5.21
+[NB=2097152] >>> NQ=8 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1750
+tLookupPQ(ms): 0.4747
+tKnnsort(ms): 0.3024
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=8 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1709
+tLookupPQ(ms): 0.4795
+tKnnsort(ms): 0.3029
+Average QPS over 1 runs: 5.18
+[NB=2097152] >>> NQ=8 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1858
+tLookupPQ(ms): 0.4770
+tKnnsort(ms): 0.2989
+Average QPS over 1 runs: 5.25
+[NB=2097152] >>> NQ=8 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1802
+tLookupPQ(ms): 0.4797
+tKnnsort(ms): 0.2992
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=8 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1870
+tLookupPQ(ms): 0.4797
+tKnnsort(ms): 0.3017
+Average QPS over 1 runs: 5.20
+[NB=2097152] >>> NQ=16 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2549
+tLookupPQ(ms): 0.9508
+tKnnsort(ms): 0.5991
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=16 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2839
+tLookupPQ(ms): 0.9491
+tKnnsort(ms): 0.5992
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=16 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2361
+tLookupPQ(ms): 0.9522
+tKnnsort(ms): 0.6006
+Average QPS over 1 runs: 5.21
+[NB=2097152] >>> NQ=16 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2480
+tLookupPQ(ms): 0.9491
+tKnnsort(ms): 0.5940
+Average QPS over 1 runs: 5.25
+[NB=2097152] >>> NQ=16 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2551
+tLookupPQ(ms): 0.9506
+tKnnsort(ms): 0.5929
+Average QPS over 1 runs: 5.26
+[NB=2097152] >>> NQ=32 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3940
+tLookupPQ(ms): 1.9086
+tKnnsort(ms): 1.1898
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=32 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3911
+tLookupPQ(ms): 1.8957
+tKnnsort(ms): 1.1825
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=32 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3901
+tLookupPQ(ms): 1.8987
+tKnnsort(ms): 1.1848
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=32 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4011
+tLookupPQ(ms): 1.9068
+tKnnsort(ms): 1.1955
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=32 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3931
+tLookupPQ(ms): 1.9038
+tKnnsort(ms): 1.1901
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=64 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4209
+tLookupPQ(ms): 3.8079
+tKnnsort(ms): 2.3853
+Average QPS over 1 runs: 5.25
+[NB=2097152] >>> NQ=64 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4390
+tLookupPQ(ms): 3.8641
+tKnnsort(ms): 2.4391
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=64 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4211
+tLookupPQ(ms): 3.8024
+tKnnsort(ms): 2.3612
+Average QPS over 1 runs: 5.25
+[NB=2097152] >>> NQ=64 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4221
+tLookupPQ(ms): 3.7790
+tKnnsort(ms): 2.3872
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=64 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 4.6360
+tLookupPQ(ms): 3.8028
+tKnnsort(ms): 2.3856
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=128 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7251
+tLookupPQ(ms): 7.6102
+tKnnsort(ms): 4.7956
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=128 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7380
+tLookupPQ(ms): 7.5678
+tKnnsort(ms): 4.7629
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=128 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7368
+tLookupPQ(ms): 7.6544
+tKnnsort(ms): 4.8224
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=128 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7290
+tLookupPQ(ms): 7.6192
+tKnnsort(ms): 4.7600
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=128 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7891
+tLookupPQ(ms): 7.6619
+tKnnsort(ms): 4.8422
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=256 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.2031
+tLookupPQ(ms): 15.2871
+tKnnsort(ms): 9.5909
+Average QPS over 1 runs: 5.23
+[NB=2097152] >>> NQ=256 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1929
+tLookupPQ(ms): 15.3033
+tKnnsort(ms): 9.7285
+Average QPS over 1 runs: 5.22
+[NB=2097152] >>> NQ=256 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1970
+tLookupPQ(ms): 15.2478
+tKnnsort(ms): 9.5575
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=256 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.2090
+tLookupPQ(ms): 15.2163
+tKnnsort(ms): 9.5209
+Average QPS over 1 runs: 5.24
+[NB=2097152] >>> NQ=256 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1931
+tLookupPQ(ms): 15.2176
+tKnnsort(ms): 9.5485
+Average QPS over 1 runs: 5.23
+=============================================
+Running experiments with NB=4194304
+=============================================
+[NB=4194304] >>> NQ=1 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1140
+tLookupPQ(ms): 0.1188
+tKnnsort(ms): 0.0747
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=1 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1150
+tLookupPQ(ms): 0.1195
+tKnnsort(ms): 0.0746
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=1 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1201
+tLookupPQ(ms): 0.1202
+tKnnsort(ms): 0.0744
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=1 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1160
+tLookupPQ(ms): 0.1206
+tKnnsort(ms): 0.0761
+Average QPS over 1 runs: 2.59
+[NB=4194304] >>> NQ=1 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1140
+tLookupPQ(ms): 0.1222
+tKnnsort(ms): 0.0756
+Average QPS over 1 runs: 2.60
+[NB=4194304] >>> NQ=2 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1770
+tLookupPQ(ms): 0.2393
+tKnnsort(ms): 0.1505
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=2 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1240
+tLookupPQ(ms): 0.2395
+tKnnsort(ms): 0.1509
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=2 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1270
+tLookupPQ(ms): 0.2397
+tKnnsort(ms): 0.1507
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=2 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1201
+tLookupPQ(ms): 0.2373
+tKnnsort(ms): 0.1481
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=2 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1331
+tLookupPQ(ms): 0.2397
+tKnnsort(ms): 0.1480
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=4 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1409
+tLookupPQ(ms): 0.4741
+tKnnsort(ms): 0.2979
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=4 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1382
+tLookupPQ(ms): 0.4742
+tKnnsort(ms): 0.2964
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=4 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1328
+tLookupPQ(ms): 0.4757
+tKnnsort(ms): 0.2979
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=4 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1521
+tLookupPQ(ms): 0.4745
+tKnnsort(ms): 0.2959
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=4 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1318
+tLookupPQ(ms): 0.4744
+tKnnsort(ms): 0.2978
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=8 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1731
+tLookupPQ(ms): 0.9525
+tKnnsort(ms): 0.5976
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=8 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1729
+tLookupPQ(ms): 0.9552
+tKnnsort(ms): 0.6036
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=8 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1748
+tLookupPQ(ms): 0.9609
+tKnnsort(ms): 0.6028
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=8 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1738
+tLookupPQ(ms): 0.9518
+tKnnsort(ms): 0.5931
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=8 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1699
+tLookupPQ(ms): 0.9560
+tKnnsort(ms): 0.5991
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=16 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2329
+tLookupPQ(ms): 1.9187
+tKnnsort(ms): 1.1991
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=16 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2529
+tLookupPQ(ms): 1.9046
+tKnnsort(ms): 1.1924
+Average QPS over 1 runs: 2.63
+[NB=4194304] >>> NQ=16 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2510
+tLookupPQ(ms): 1.8967
+tKnnsort(ms): 1.1934
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=16 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 4.9250
+tLookupPQ(ms): 1.9127
+tKnnsort(ms): 1.1967
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=16 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2571
+tLookupPQ(ms): 1.9118
+tKnnsort(ms): 1.1871
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=32 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3972
+tLookupPQ(ms): 3.8102
+tKnnsort(ms): 2.3922
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=32 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4001
+tLookupPQ(ms): 3.7754
+tKnnsort(ms): 2.3471
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=32 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4060
+tLookupPQ(ms): 3.8001
+tKnnsort(ms): 2.4024
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=32 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3911
+tLookupPQ(ms): 3.8119
+tKnnsort(ms): 2.4048
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=32 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3982
+tLookupPQ(ms): 3.8226
+tKnnsort(ms): 2.4066
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=64 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4351
+tLookupPQ(ms): 7.5246
+tKnnsort(ms): 4.7004
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=64 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4949
+tLookupPQ(ms): 7.6696
+tKnnsort(ms): 4.7830
+Average QPS over 1 runs: 2.61
+[NB=4194304] >>> NQ=64 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4319
+tLookupPQ(ms): 7.6855
+tKnnsort(ms): 4.8443
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=64 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4299
+tLookupPQ(ms): 7.6465
+tKnnsort(ms): 4.7216
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=64 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4170
+tLookupPQ(ms): 7.6250
+tKnnsort(ms): 4.7420
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=128 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.9460
+tLookupPQ(ms): 15.3215
+tKnnsort(ms): 9.5891
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=128 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7390
+tLookupPQ(ms): 15.2850
+tKnnsort(ms): 9.5341
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=128 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7439
+tLookupPQ(ms): 15.2823
+tKnnsort(ms): 9.5354
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=128 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7549
+tLookupPQ(ms): 15.2452
+tKnnsort(ms): 9.4864
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=128 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.0730
+tLookupPQ(ms): 15.2174
+tKnnsort(ms): 9.5620
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=256 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.0989
+tLookupPQ(ms): 30.7375
+tKnnsort(ms): 19.3272
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=256 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.0901
+tLookupPQ(ms): 30.5230
+tKnnsort(ms): 19.3026
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=256 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.0959
+tLookupPQ(ms): 30.3491
+tKnnsort(ms): 19.0590
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=256 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1011
+tLookupPQ(ms): 30.4504
+tKnnsort(ms): 19.1220
+Average QPS over 1 runs: 2.62
+[NB=4194304] >>> NQ=256 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1301
+tLookupPQ(ms): 30.5262
+tKnnsort(ms): 19.0789
+Average QPS over 1 runs: 2.62
+=============================================
+Running experiments with NB=8388608
+=============================================
+[NB=8388608] >>> NQ=1 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.6350
+tLookupPQ(ms): 0.2387
+tKnnsort(ms): 0.1482
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=1 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1179
+tLookupPQ(ms): 0.2395
+tKnnsort(ms): 0.1481
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=1 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1172
+tLookupPQ(ms): 0.2404
+tKnnsort(ms): 0.1493
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=1 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1150
+tLookupPQ(ms): 0.2378
+tKnnsort(ms): 0.1489
+Average QPS over 1 runs: 1.32
+[NB=8388608] >>> NQ=1 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1240
+tLookupPQ(ms): 0.2405
+tKnnsort(ms): 0.1518
+Average QPS over 1 runs: 1.30
+[NB=8388608] >>> NQ=2 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1208
+tLookupPQ(ms): 0.4759
+tKnnsort(ms): 0.2962
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=2 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1211
+tLookupPQ(ms): 0.4765
+tKnnsort(ms): 0.2984
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=2 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1230
+tLookupPQ(ms): 0.4766
+tKnnsort(ms): 0.2978
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=2 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1211
+tLookupPQ(ms): 0.4788
+tKnnsort(ms): 0.2966
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=2 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1069
+tLookupPQ(ms): 0.4828
+tKnnsort(ms): 0.3036
+Average QPS over 1 runs: 1.30
+[NB=8388608] >>> NQ=4 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1479
+tLookupPQ(ms): 0.9439
+tKnnsort(ms): 0.5997
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=4 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1392
+tLookupPQ(ms): 0.9600
+tKnnsort(ms): 0.6016
+Average QPS over 1 runs: 1.30
+[NB=8388608] >>> NQ=4 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1411
+tLookupPQ(ms): 0.9472
+tKnnsort(ms): 0.6017
+Average QPS over 1 runs: 1.30
+[NB=8388608] >>> NQ=4 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1401
+tLookupPQ(ms): 0.9551
+tKnnsort(ms): 0.5953
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=4 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1509
+tLookupPQ(ms): 0.9517
+tKnnsort(ms): 0.5914
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=8 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1750
+tLookupPQ(ms): 1.9026
+tKnnsort(ms): 1.1862
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=8 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1721
+tLookupPQ(ms): 1.9072
+tKnnsort(ms): 1.2087
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=8 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1702
+tLookupPQ(ms): 1.9068
+tKnnsort(ms): 1.1870
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=8 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1870
+tLookupPQ(ms): 1.9067
+tKnnsort(ms): 1.1870
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=8 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.1738
+tLookupPQ(ms): 1.9046
+tKnnsort(ms): 1.1792
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=16 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2690
+tLookupPQ(ms): 3.8499
+tKnnsort(ms): 2.4111
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=16 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2500
+tLookupPQ(ms): 3.8281
+tKnnsort(ms): 2.3968
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=16 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2480
+tLookupPQ(ms): 3.8081
+tKnnsort(ms): 2.3737
+Average QPS over 1 runs: 1.32
+[NB=8388608] >>> NQ=16 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2490
+tLookupPQ(ms): 3.8261
+tKnnsort(ms): 2.3997
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=16 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.2568
+tLookupPQ(ms): 3.8038
+tKnnsort(ms): 2.3570
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=32 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3950
+tLookupPQ(ms): 7.6505
+tKnnsort(ms): 4.7560
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=32 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4011
+tLookupPQ(ms): 7.6594
+tKnnsort(ms): 4.8188
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=32 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4119
+tLookupPQ(ms): 7.6108
+tKnnsort(ms): 4.7908
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=32 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3909
+tLookupPQ(ms): 7.6479
+tKnnsort(ms): 4.7813
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=32 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.3911
+tLookupPQ(ms): 7.6644
+tKnnsort(ms): 4.7925
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=64 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4180
+tLookupPQ(ms): 15.3632
+tKnnsort(ms): 9.6362
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=64 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4270
+tLookupPQ(ms): 15.1618
+tKnnsort(ms): 9.3815
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=64 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4211
+tLookupPQ(ms): 15.2347
+tKnnsort(ms): 9.5336
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=64 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4351
+tLookupPQ(ms): 15.2775
+tKnnsort(ms): 9.5447
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=64 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.4260
+tLookupPQ(ms): 15.2603
+tKnnsort(ms): 9.5163
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=128 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7439
+tLookupPQ(ms): 30.4516
+tKnnsort(ms): 19.1807
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=128 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7432
+tLookupPQ(ms): 30.4916
+tKnnsort(ms): 18.9202
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=128 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7451
+tLookupPQ(ms): 30.6474
+tKnnsort(ms): 19.0808
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=128 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7410
+tLookupPQ(ms): 30.4189
+tKnnsort(ms): 19.0538
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=128 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 0.7461
+tLookupPQ(ms): 30.6321
+tKnnsort(ms): 19.3113
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=256 | K=1 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1099
+tLookupPQ(ms): 61.1910
+tKnnsort(ms): 38.2944
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=256 | K=4 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1121
+tLookupPQ(ms): 61.1400
+tKnnsort(ms): 38.1852
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=256 | K=16 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1230
+tLookupPQ(ms): 61.2225
+tKnnsort(ms): 38.0564
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=256 | K=64 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1040
+tLookupPQ(ms): 61.1381
+tKnnsort(ms): 38.2563
+Average QPS over 1 runs: 1.31
+[NB=8388608] >>> NQ=256 | K=256 <<<
+[Execution Time Breakdowns]
+tGenDisTab(ms): 1.1121
+tLookupPQ(ms): 60.5100
+tKnnsort(ms): 37.9092
+Average QPS over 1 runs: 1.31
