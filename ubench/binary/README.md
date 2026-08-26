@@ -4,11 +4,31 @@
 
 ## Build
 
-Requires `libfaiss` to be built and visible to the linker.
-
 ```sh
 make
 ```
+
+`libfaiss.a` is a static archive, so it carries no record of its own
+dependencies: BLAS and LAPACK have to be named on the link line, after
+`-lfaiss`. Without them the link fails on `sgemm_`, `dsyev_`, `dgesvd_`,
+`sgeqrf_` and friends. The Makefile probes for OpenBLAS, then reference
+LAPACK/BLAS, then MKL, and stops with an explanation if it finds none:
+
+```sh
+sudo apt install libopenblas-dev liblapack-dev
+```
+
+Override the probe when it picks the wrong one — a conda BLAS is not on the
+default search path, for instance:
+
+```sh
+make BLAS_LIBS="-L$CONDA_PREFIX/lib -lopenblas"
+make BLAS_LIBS="-lmkl_rt"                        # MKL
+make FAISS_PREFIX=/opt/faiss                     # faiss installed elsewhere
+```
+
+Those symbols come from parts of faiss the binary path never calls (PCA, OPQ,
+float distances), but a static link still has to resolve them.
 
 ## Run
 
