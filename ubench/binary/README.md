@@ -43,9 +43,20 @@ float distances), but a static link still has to resolve them.
 | `-nb` | database vectors | 1048576 |
 | `-nq` | query vectors | 16 |
 | `-k` | neighbours per query | 1 |
+| `-r` | search repetitions; time and energy are the mean | 1 |
 
 `d` is a **bit** count, not a float count: the index stores `d/8` bytes per
 vector and rejects any `d` that is not a multiple of 8.
+
+Every count takes an optional binary K/M/G suffix, so `-nb 1G` is 1073741824
+vectors (`1024^3`), `-nb 4M` is 4194304, `-nb 64K` is 65536. Case does not
+matter. The database is generated and added in chunks, so peak memory stays at
+the index's own copy rather than double it — but `-nb 1G` at `-d 128` is still
+16 GiB resident, and the run prints the size before allocating.
+
+`-r` repeats `index.search()` and reports the mean time and mean energy per
+search. It is the knob for stretching the RAPL measurement window without
+growing the database.
 
 ## Energy
 
@@ -73,10 +84,10 @@ Four things to keep in mind when reading the numbers:
 - **RAPL is socket-wide.** It counts everything on the package, not just this
   process. Measure on an otherwise idle machine.
 - **Idle power is included.** The counters do not subtract a baseline, so a
-  search that lasts a few milliseconds is mostly idle draw. Use an `nb` and
-  `nq` large enough to keep `index.search()` running for at least a second or
-  two, otherwise the energy figure says more about the machine than about the
-  search.
+  search that lasts a few milliseconds is mostly idle draw. Raise `-r` (or
+  `nb`/`nq`) until the measured window is at least a second or two, otherwise
+  the energy figure says more about the machine than about the search. The run
+  prints the total measured time next to the mean so the window is visible.
 - **The counters update roughly every 1 ms**, which puts a floor on the
   resolution for the same reason.
 - **The `dram` domain does not exist on every CPU.** Server parts expose it;
@@ -87,14 +98,16 @@ Four things to keep in mind when reading the numbers:
 
 ```sh
 ./run_cpu_binary_flat.sh                                   # writes results.csv
-OUT=big.csv T_LIST="1 8" D_LIST=256 ./run_cpu_binary_flat.sh
+OUT=big.csv T_LIST="1 8" NB_LIST="1G" RUNS=10 ./run_cpu_binary_flat.sh
 ```
 
 The CSV columns are:
 
 ```
-threads,d,nb,nq,k,time_s,qps,pkg_j,dram_j
+threads,d,nb,nq,k,runs,time_s,qps,pkg_j,dram_j
 ```
+
+`time_s`, `pkg_j` and `dram_j` are per search, averaged over `runs`.
 
 Each run prints one `CSV,...` line that the script collects, so a single run
 can be appended to a sheet by hand the same way.

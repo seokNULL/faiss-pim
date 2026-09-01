@@ -11,6 +11,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <random>
@@ -134,42 +135,95 @@ struct Rapl {
     }
 };
 
+// Parses "1048576" or a K/M/G suffix, binary: 1K = 1024, 1M = 1024^2,
+// 1G = 1024^3. Returns -1 on anything malformed.
+static long long parse_size(const char* s) {
+    char* end = nullptr;
+    long long v = strtoll(s, &end, 10);
+    if (end == s || v < 0) {
+        return -1;
+    }
+    switch (*end) {
+        case 'K':
+        case 'k':
+            v <<= 10;
+            end++;
+            break;
+        case 'M':
+        case 'm':
+            v <<= 20;
+            end++;
+            break;
+        case 'G':
+        case 'g':
+            v <<= 30;
+            end++;
+            break;
+        default:
+            break;
+    }
+    return (*end == '\0') ? v : -1;
+}
+
 int main(int argc, char** argv) {
-    int nt = 1;           // CPU threads
-    int d = 128;          // vector dimension in BITS, multiple of 8
-    int nb = 1024 * 1024; // database vectors
-    int nq = 16;          // query vectors
-    int k = 1;            // neighbors per query
+    long long nt = 1;            // CPU threads
+    long long d = 128;           // vector dimension in BITS, multiple of 8
+    long long nb = 1024 * 1024;  // database vectors
+    long long nq = 16;           // query vectors
+    long long k = 1;             // neighbors per query
+    long long runs = 1;          // search repetitions, averaged
 
     for (int i = 1; i < argc; i++) {
-        if (strcmp(argv[i], "-t") == 0 && i + 1 < argc) {
-            nt = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "-d") == 0 && i + 1 < argc) {
-            d = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "-nb") == 0 && i + 1 < argc) {
-            nb = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "-nq") == 0 && i + 1 < argc) {
-            nq = atoi(argv[++i]);
-        } else if (strcmp(argv[i], "-k") == 0 && i + 1 < argc) {
-            k = atoi(argv[++i]);
-        } else {
-            printf("Usage: %s -t <threads> -d <bits> -nb <n> -nq <n> -k <n>\n",
-                   argv[0]);
+        long long* target = nullptr;
+        if (strcmp(argv[i], "-t") == 0) {
+            target = &nt;
+        } else if (strcmp(argv[i], "-d") == 0) {
+            target = &d;
+        } else if (strcmp(argv[i], "-nb") == 0) {
+            target = &nb;
+        } else if (strcmp(argv[i], "-nq") == 0) {
+            target = &nq;
+        } else if (strcmp(argv[i], "-k") == 0) {
+            target = &k;
+        } else if (strcmp(argv[i], "-r") == 0) {
+            target = &runs;
+        }
+        if (target == nullptr || i + 1 >= argc) {
+            printf("Usage: %s -t <threads> -d <bits> -nb <n> -nq <n> -k <n> "
+                   "-r <runs>\n"
+                   "Counts accept a binary K/M/G suffix, e.g. -nb 1G = %lld\n",
+                   argv[0], 1LL << 30);
+            return 1;
+        }
+        *target = parse_size(argv[++i]);
+        if (*target < 0) {
+            printf("Error: %s expects a count, got '%s'\n", argv[i - 1], argv[i]);
             return 1;
         }
     }
 
     // IndexBinary stores d/8 bytes per vector.
-    if (d % 8 != 0) {
-        printf("Error: -d must be a multiple of 8 (bits), got %d\n", d);
+    if (d <= 0 || d % 8 != 0) {
+        printf("Error: -d must be a positive multiple of 8 (bits), got %lld\n", d);
+        return 1;
+    }
+    if (nt <= 0 || nb <= 0 || nq <= 0 || k <= 0 || runs <= 0) {
+        printf("Error: -t, -nb, -nq, -k and -r must be positive\n");
+        return 1;
+    }
+    if (k > nb) {
+        printf("Error: -k (%lld) cannot exceed -nb (%lld)\n", k, nb);
         return 1;
     }
 
-    omp_set_num_threads(nt);
-    int code_size = d / 8;
+    omp_set_num_threads((int)nt);
+    long long code_size = d / 8;
 
-    printf("threads=%d  d=%d bits (%d B)  nb=%d  nq=%d  k=%d\n",
-           nt, d, code_size, nb, nq, k);
+    printf("threads=%lld  d=%lld bits (%lld B)  nb=%lld  nq=%lld  k=%lld  "
+           "runs=%lld\n",
+           nt, d, code_size, nb, nq, k, runs);
+    printf("database: %.2f GiB\n",
+           (double)nb * code_size / (1024.0 * 1024.0 * 1024.0));
 
     Rapl rapl;
     rapl.discover();
@@ -183,32 +237,49 @@ int main(int argc, char** argv) {
     std::mt19937 rng(1234);
     std::uniform_int_distribution<int> distrib(0, 255);
 
-    std::vector<uint8_t> xb((size_t)nb * code_size);
-    std::vector<uint8_t> xq((size_t)nq * code_size);
+    faiss::IndexBinaryFlat index(d);
 
-    for (size_t i = 0; i < xb.size(); i++) {
-        xb[i] = distrib(rng);
+    // The index keeps its own copy of what is handed to add(), so staging the
+    // whole database first would double peak memory. Reserve once, then
+    // generate and add in chunks.
+    index.xb.reserve((size_t)nb * code_size);
+
+    const long long chunk = 1 << 20;
+    std::vector<uint8_t> buf((size_t)std::min(chunk, nb) * code_size);
+    for (long long i = 0; i < nb; i += chunk) {
+        long long n = std::min(chunk, nb - i);
+        for (size_t j = 0; j < (size_t)n * code_size; j++) {
+            buf[j] = distrib(rng);
+        }
+        index.add(n, buf.data());
     }
+
+    std::vector<uint8_t> xq((size_t)nq * code_size);
     for (size_t i = 0; i < xq.size(); i++) {
         xq[i] = distrib(rng);
     }
-
-    faiss::IndexBinaryFlat index(d);
-    index.add(nb, xb.data());
 
     std::vector<int32_t> D((size_t)nq * k);
     std::vector<idx_t> I((size_t)nq * k);
 
     rapl.start();
     auto start = std::chrono::high_resolution_clock::now();
-    index.search(nq, xq.data(), k, D.data(), I.data());
+    for (long long r = 0; r < runs; r++) {
+        index.search(nq, xq.data(), k, D.data(), I.data());
+    }
     auto end = std::chrono::high_resolution_clock::now();
     double pkg_j = 0, dram_j = 0;
     rapl.stop(pkg_j, dram_j);
 
+    // Everything below is per search: the totals divided by the run count.
     std::chrono::duration<double> elapsed = end - start;
-    double sec = elapsed.count();
-    printf("Query Time: %.6f sec\n", sec);
+    double total = elapsed.count();
+    double sec = total / runs;
+    pkg_j /= runs;
+    dram_j /= runs;
+
+    printf("Query Time: %.6f sec  (mean of %lld, %.3f sec measured)\n",
+           sec, runs, total);
     printf("Queries per second (QPS): %.2f\n", nq / sec);
 
     char pkg_s[32] = "", dram_s[32] = "";
@@ -225,12 +296,12 @@ int main(int argc, char** argv) {
     }
 
     // One machine-readable line per run, consumed by run_cpu_binary_flat.sh.
-    printf("CSV,%d,%d,%d,%d,%d,%.6f,%.2f,%s,%s\n",
-           nt, d, nb, nq, k, sec, nq / sec, pkg_s, dram_s);
+    printf("CSV,%lld,%lld,%lld,%lld,%lld,%lld,%.6f,%.2f,%s,%s\n",
+           nt, d, nb, nq, k, runs, sec, nq / sec, pkg_s, dram_s);
 
-    for (int i = 0; i < nq; i++) {
-        printf("Query index[%d]\n", i);
-        for (int j = 0; j < k; j++) {
+    for (long long i = 0; i < nq; i++) {
+        printf("Query index[%lld]\n", i);
+        for (long long j = 0; j < k; j++) {
             printf("Nearest idx: \t[%5zd], Hamming: \t%d\n",
                    I[i * k + j], D[i * k + j]);
         }
