@@ -149,13 +149,32 @@ Four things to keep in mind when reading the numbers:
 OUT=big.csv T_LIST="1 8" NB_LIST="1G" RUNS=10 ./run_cpu_binary_flat.sh
 ```
 
+Each result is printed as it lands, so a long sweep can be watched:
+
+```
+threads     d            nb    nq      k  runs      time_s        qps     GB/s     pkg_J    dram_J
+----------------------------------------------------------------------------------------------
+      4   128       1048576     8      1     2    0.005325    1502.38    25.21         -         -
+      4   512       4194304     8      1     2    0.067960     117.72    31.60         -         -
+```
+
+A configuration that cannot run — a database larger than RAM, say — prints its
+reason on one line and the sweep carries on to the next.
+
+Two files come out of a sweep: `results.csv` with the rows, and `results.log`
+with each run's full output, so a suspicious row can be traced back.
+
 The CSV columns are:
 
 ```
 threads,d,nb,nq,k,runs,time_s,qps,pkg_j,dram_j
 ```
 
-`time_s`, `pkg_j` and `dram_j` are per search, averaged over `runs`.
+`time_s`, `pkg_j` and `dram_j` are per search, averaged over `runs`. The `GB/s`
+shown on screen is derived rather than stored: every query scans the whole
+database, so it is `nb * (d/8) * nq / time_s`. Watching it flatten as `nb`
+grows is how you see the search stop being compute-bound and start being
+bound by memory bandwidth.
 
 Each run prints one `CSV,...` line that the script collects, so a single run
 can be appended to a sheet by hand the same way.
