@@ -51,8 +51,22 @@ vector and rejects any `d` that is not a multiple of 8.
 Every count takes an optional binary K/M/G suffix, so `-nb 1G` is 1073741824
 vectors (`1024^3`), `-nb 4M` is 4194304, `-nb 64K` is 65536. Case does not
 matter. The database is generated and added in chunks, so peak memory stays at
-the index's own copy rather than double it — but `-nb 1G` at `-d 128` is still
-16 GiB resident, and the run prints the size before allocating.
+the index's own copy rather than double it — but the database still has to fit
+in RAM. The run prints its size against `MemAvailable` and exits with an
+explanation if it cannot fit, rather than dying on `bad_alloc` part-way through
+a sweep.
+
+| `-nb` | `-d 64` | `-d 128` | `-d 256` |
+|---|---|---|---|
+| 1G | 8 GiB | 16 GiB | 32 GiB |
+| 16G | 128 GiB | 256 GiB | 512 GiB |
+| 64G | 512 GiB | 1 TiB | 2 TiB |
+| 256G | 2 TiB | 4 TiB | 8 TiB |
+
+There is no arithmetic limit before that: counts are 64-bit and byte totals are
+`size_t`, whose 8 EiB ceiling is far above anything that fits in memory. RAM is
+the only wall. Generating the database runs at roughly 3 GiB/s, so a 1 TiB
+database costs about 6 minutes of build time before the first search.
 
 `-r` repeats `index.search()` and reports the mean time and mean energy per
 search. It is the knob for stretching the RAPL measurement window without

@@ -47,6 +47,21 @@ static bool read_line(const std::string& path, std::string& s) {
     return bool(std::getline(f, s));
 }
 
+// Best-effort free memory in bytes, so an impossible database size fails with
+// an explanation instead of an uncaught bad_alloc part-way through a sweep.
+static uint64_t mem_available() {
+    std::ifstream f("/proc/meminfo");
+    std::string key;
+    uint64_t kb = 0;
+    while (f >> key >> kb) {
+        if (key == "MemAvailable:") {
+            return kb * 1024;
+        }
+        f.ignore(4096, '\n');
+    }
+    return 0;
+}
+
 struct Rapl {
     std::vector<std::string> pkg_path, dram_path;
     std::vector<uint64_t> pkg_max, dram_max;
@@ -222,8 +237,16 @@ int main(int argc, char** argv) {
     printf("threads=%lld  d=%lld bits (%lld B)  nb=%lld  nq=%lld  k=%lld  "
            "runs=%lld\n",
            nt, d, code_size, nb, nq, k, runs);
-    printf("database: %.2f GiB\n",
-           (double)nb * code_size / (1024.0 * 1024.0 * 1024.0));
+    const size_t db_bytes = (size_t)nb * code_size;
+    const double gib = 1024.0 * 1024.0 * 1024.0;
+    uint64_t avail = mem_available();
+    printf("database: %.2f GiB (available: %.2f GiB)\n",
+           db_bytes / gib, avail / gib);
+    if (avail > 0 && db_bytes > avail) {
+        printf("Error: need %.2f GiB but only %.2f GiB is available\n",
+               db_bytes / gib, avail / gib);
+        return 1;
+    }
 
     Rapl rapl;
     rapl.discover();
@@ -234,8 +257,9 @@ int main(int argc, char** argv) {
                           : "not available on this machine");
     }
 
-    std::mt19937 rng(1234);
-    std::uniform_int_distribution<int> distrib(0, 255);
+    // 64 bits per draw rather than one byte: at these database sizes a
+    // byte-at-a-time uniform_int_distribution dominates the build.
+    std::mt19937_64 rng(1234);
 
     faiss::IndexBinaryFlat index(d);
 
@@ -245,18 +269,22 @@ int main(int argc, char** argv) {
     index.xb.reserve((size_t)nb * code_size);
 
     const long long chunk = 1 << 20;
-    std::vector<uint8_t> buf((size_t)std::min(chunk, nb) * code_size);
+    // Round up so the buffer is always a whole number of 64-bit words.
+    std::vector<uint8_t> buf(
+            (((size_t)std::min(chunk, nb) * code_size) + 7) & ~size_t(7));
     for (long long i = 0; i < nb; i += chunk) {
         long long n = std::min(chunk, nb - i);
-        for (size_t j = 0; j < (size_t)n * code_size; j++) {
-            buf[j] = distrib(rng);
+        uint64_t* w = (uint64_t*)buf.data();
+        for (size_t j = 0; j < buf.size() / 8; j++) {
+            w[j] = rng();
         }
         index.add(n, buf.data());
     }
 
-    std::vector<uint8_t> xq((size_t)nq * code_size);
-    for (size_t i = 0; i < xq.size(); i++) {
-        xq[i] = distrib(rng);
+    std::vector<uint8_t> xq(((size_t)nq * code_size + 7) & ~size_t(7));
+    uint64_t* wq = (uint64_t*)xq.data();
+    for (size_t i = 0; i < xq.size() / 8; i++) {
+        wq[i] = rng();
     }
 
     std::vector<int32_t> D((size_t)nq * k);
