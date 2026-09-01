@@ -59,6 +59,11 @@ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
 # Valid values are "generic", "avx2", "avx512", "avx512_spr", "sve".
 option(FAISS_OPT_LEVEL "" "generic")
+# AVX512_VPOPCNTDQ gives HammingComputer64 a vectorised _mm512_popcnt_epi64
+# path instead of eight scalar popcounts. Ice Lake and later only, so the
+# resulting library will not run on older CPUs. Applies to FAISS_OPT_LEVEL
+# "avx512" only.
+option(FAISS_ENABLE_AVX512_VPOPCNTDQ "Build the avx512 library with AVX512_VPOPCNTDQ." OFF)
 option(FAISS_ENABLE_GPU "Enable support for GPU indexes." ON)
 option(FAISS_ENABLE_CUVS "Enable cuVS for GPU indexes." OFF)
 option(FAISS_ENABLE_ROCM "Enable ROCm for GPU indexes." OFF)

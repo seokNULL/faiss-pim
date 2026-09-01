@@ -267,6 +267,11 @@ if(NOT WIN32)
   # All modern CPUs support F, CD, VL, DQ, BW extensions.
   # Ref: https://en.wikipedia.org/wiki/AVX512
   target_compile_options(faiss_avx512 PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-mavx2 -mfma -mf16c -mavx512f -mavx512cd -mavx512vl -mavx512dq -mavx512bw -mpopcnt>)
+  # Opt-in: defines __AVX512VPOPCNTDQ__, which switches HammingComputer64 to
+  # _mm512_popcnt_epi64. Ice Lake and later only.
+  if(FAISS_ENABLE_AVX512_VPOPCNTDQ)
+    target_compile_options(faiss_avx512 PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-mavx512vpopcntdq>)
+  endif()
 else()
   target_compile_options(faiss_avx512 PRIVATE $<$<COMPILE_LANGUAGE:CXX>:/arch:AVX512>)
   # we need bigobj for the swig wrapper

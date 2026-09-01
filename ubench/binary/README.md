@@ -18,6 +18,34 @@ LAPACK/BLAS, then MKL, and stops with an explanation if it finds none:
 sudo apt install libopenblas-dev liblapack-dev
 ```
 
+### Which faiss library to link
+
+`libfaiss.a` is the **generic** build: faiss compiles it without `-mavx2` or
+`-mpopcnt`, so `popcount64` becomes software SWAR and the Hamming kernels run
+3-4x slower than they need to. Building faiss with `FAISS_OPT_LEVEL` installs
+`libfaiss_avx2.a` / `libfaiss_avx512.a` *alongside* the generic one — it does
+not replace it, and the C++ static libraries carry no runtime dispatch, so the
+library has to be named explicitly:
+
+```sh
+make FAISS_LIB=-lfaiss_avx512
+make FAISS_LIB=-lfaiss_avx2
+```
+
+Measured on a 2M x d database, `nq=16`, 4 threads:
+
+| d | generic | avx2 | avx512 |
+|---|---|---|---|
+| 128 | 0.0553 s | 0.0190 s (2.9x) | 0.0118 s (4.7x) |
+| 512 | 0.2208 s | 0.0513 s (4.3x) | 0.0514 s (4.3x) |
+
+At `d=512` avx512 matches avx2 because `HammingComputer64` only uses
+`_mm512_popcnt_epi64` under `__AVX512VPOPCNTDQ__`, which faiss's stock avx512
+flags do not define. Build faiss with `-DFAISS_ENABLE_AVX512_VPOPCNTDQ=ON`
+(Ice Lake and later) to enable it.
+
+### BLAS
+
 Override the probe when it picks the wrong one — a conda BLAS is not on the
 default search path, for instance:
 
@@ -25,6 +53,12 @@ default search path, for instance:
 make BLAS_LIBS="-L$CONDA_PREFIX/lib -lopenblas"
 make BLAS_LIBS="-lmkl_rt"                        # MKL
 make FAISS_PREFIX=/opt/faiss                     # faiss installed elsewhere
+```
+
+All three combine, e.g.
+
+```sh
+make FAISS_LIB=-lfaiss_avx512 BLAS_LIBS="-L$CONDA_PREFIX/lib -lopenblas"
 ```
 
 Those symbols come from parts of faiss the binary path never calls (PCA, OPQ,
