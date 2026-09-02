@@ -78,6 +78,7 @@ float distances), but a static link still has to resolve them.
 | `-nq` | query vectors | 16 |
 | `-k` | neighbours per query | 1 |
 | `-r` | search repetitions; time and energy are the mean | 1 |
+| `-heap` | `1` = heap top-k, `0` = counting top-k | 1 |
 
 `d` is a **bit** count, not a float count: the index stores `d/8` bytes per
 vector and rejects any `d` that is not a multiple of 8.
@@ -105,6 +106,37 @@ database costs about 6 minutes of build time before the first search.
 `-r` repeats `index.search()` and reports the mean time and mean energy per
 search. It is the knob for stretching the RAPL measurement window without
 growing the database.
+
+### Two top-k paths
+
+`-heap` selects `IndexBinaryFlat::use_heap`, which picks between the two
+implementations faiss ships:
+
+| | `-heap 1` (`hammings_knn_hc`) | `-heap 0` (`hammings_knn_mc`) |
+|---|---|---|
+| structure | max-heap of size k | one bucket per distance, `d+1` of them |
+| insert | `O(log k)` sift-down | `O(1)` bucket index |
+| threshold | heap root `bh_val_[0]` | `thres`, lowered as buckets fill |
+| ordering | `heap_reorder` at the end | bucket order is already sorted |
+| memory | `nq * k` | `nq * (d+1) * k` |
+
+Both return identical results. The counting path is cheaper per candidate, but
+its buckets grow with `d` and `k`: at `nq=128, d=512, k=256` they take 0.13 GiB
+and at `nq=8192, k=8192` they take 256 GiB. That size is checked against
+`MemAvailable` along with the database, so an impossible combination is
+refused rather than left to the OOM killer.
+
+Measured at `d=128, nb=2M, nq=16`, 4 threads, avx2 build:
+
+| k | heap | counting | |
+|---|---|---|---|
+| 1 | 0.02113 s | 0.01055 s | 0.50x |
+| 256 | 0.01833 s | 0.01024 s | 0.56x |
+| 1024 | 0.02097 s | 0.01153 s | 0.55x |
+
+Neither path varies much with k — the `dis < bh_val_[0]` gate rejects almost
+every candidate before the insert either way — but the counting path is
+consistently about half the time.
 
 ## Energy
 
@@ -147,15 +179,16 @@ Four things to keep in mind when reading the numbers:
 ```sh
 ./run_cpu_binary_flat.sh                                   # writes results.csv
 OUT=big.csv T_LIST="1 8" NB_LIST="1G" RUNS=10 ./run_cpu_binary_flat.sh
+HEAP_LIST="1 0" ./run_cpu_binary_flat.sh        # both top-k paths
 ```
 
 Each result is printed as it lands, so a long sweep can be watched:
 
 ```
-threads     d            nb    nq      k  runs      time_s        qps     GB/s     pkg_J    dram_J
-----------------------------------------------------------------------------------------------
-      4   128       1048576     8      1     2    0.005325    1502.38    25.21         -         -
-      4   512       4194304     8      1     2    0.067960     117.72    31.60         -         -
+threads     d            nb    nq      k  heap  runs      time_s        qps     GB/s     pkg_J    dram_J
+----------------------------------------------------------------------------------------------------
+      4   128       1048576     8      1     1     2    0.005507    1452.73    24.37         -         -
+      4   128       1048576     8      1     0     2    0.003414    2343.17    39.31         -         -
 ```
 
 A configuration that cannot run — a database larger than RAM, say — prints its
@@ -167,7 +200,7 @@ with each run's full output, so a suspicious row can be traced back.
 The CSV columns are:
 
 ```
-threads,d,nb,nq,k,runs,time_s,qps,pkg_j,dram_j
+threads,d,nb,nq,k,heap,runs,time_s,qps,pkg_j,dram_j
 ```
 
 `time_s`, `pkg_j` and `dram_j` are per search, averaged over `runs`. The `GB/s`

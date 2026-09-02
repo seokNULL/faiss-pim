@@ -187,6 +187,7 @@ int main(int argc, char** argv) {
     long long nq = 16;           // query vectors
     long long k = 1;             // neighbors per query
     long long runs = 1;          // search repetitions, averaged
+    long long heap = 1;          // 1 = hammings_knn_hc, 0 = hammings_knn_mc
 
     for (int i = 1; i < argc; i++) {
         long long* target = nullptr;
@@ -202,11 +203,14 @@ int main(int argc, char** argv) {
             target = &k;
         } else if (strcmp(argv[i], "-r") == 0) {
             target = &runs;
+        } else if (strcmp(argv[i], "-heap") == 0) {
+            target = &heap;
         }
         if (target == nullptr || i + 1 >= argc) {
             printf("Usage: %s -t <threads> -d <bits> -nb <n> -nq <n> -k <n> "
-                   "-r <runs>\n"
-                   "Counts accept a binary K/M/G suffix, e.g. -nb 1G = %lld\n",
+                   "-r <runs> -heap <0|1>\n"
+                   "Counts accept a binary K/M/G suffix, e.g. -nb 1G = %lld\n"
+                   "-heap 1 selects the heap top-k, 0 the counting top-k\n",
                    argv[0], 1LL << 30);
             return 1;
         }
@@ -230,21 +234,38 @@ int main(int argc, char** argv) {
         printf("Error: -k (%lld) cannot exceed -nb (%lld)\n", k, nb);
         return 1;
     }
+    if (heap != 0 && heap != 1) {
+        printf("Error: -heap must be 0 or 1, got %lld\n", heap);
+        return 1;
+    }
 
     omp_set_num_threads((int)nt);
     long long code_size = d / 8;
 
     printf("threads=%lld  d=%lld bits (%lld B)  nb=%lld  nq=%lld  k=%lld  "
-           "runs=%lld\n",
-           nt, d, code_size, nb, nq, k, runs);
+           "runs=%lld  heap=%lld\n",
+           nt, d, code_size, nb, nq, k, runs, heap);
+
+    // hammings_knn_mc keeps one bucket per possible distance, each holding up
+    // to k ids, for every query: nq * (d + 1) * k ids plus the counters. That
+    // is unbounded in k and d, so account for it before allocating.
     const size_t db_bytes = (size_t)nb * code_size;
+    size_t topk_bytes = 0;
+    if (heap == 0) {
+        size_t buckets = (size_t)d + 1;
+        topk_bytes = (size_t)nq * buckets * ((size_t)k * sizeof(int64_t) +
+                                             sizeof(int));
+    }
     const double gib = 1024.0 * 1024.0 * 1024.0;
     uint64_t avail = mem_available();
-    printf("database: %.2f GiB (available: %.2f GiB)\n",
-           db_bytes / gib, avail / gib);
-    if (avail > 0 && db_bytes > avail) {
+    printf("database: %.2f GiB", db_bytes / gib);
+    if (topk_bytes > 0) {
+        printf(" + counting buckets: %.2f GiB", topk_bytes / gib);
+    }
+    printf(" (available: %.2f GiB)\n", avail / gib);
+    if (avail > 0 && db_bytes + topk_bytes > avail) {
         printf("Error: need %.2f GiB but only %.2f GiB is available\n",
-               db_bytes / gib, avail / gib);
+               (db_bytes + topk_bytes) / gib, avail / gib);
         return 1;
     }
 
@@ -262,6 +283,9 @@ int main(int argc, char** argv) {
     std::mt19937_64 rng(1234);
 
     faiss::IndexBinaryFlat index(d);
+    // false routes the scan through hammings_knn_mc (counting) instead of
+    // hammings_knn_hc (heap).
+    index.use_heap = (heap != 0);
 
     // The index keeps its own copy of what is handed to add(), so staging the
     // whole database first would double peak memory. Reserve once, then
@@ -324,8 +348,8 @@ int main(int argc, char** argv) {
     }
 
     // One machine-readable line per run, consumed by run_cpu_binary_flat.sh.
-    printf("CSV,%lld,%lld,%lld,%lld,%lld,%lld,%.6f,%.2f,%s,%s\n",
-           nt, d, nb, nq, k, runs, sec, nq / sec, pkg_s, dram_s);
+    printf("CSV,%lld,%lld,%lld,%lld,%lld,%lld,%lld,%.6f,%.2f,%s,%s\n",
+           nt, d, nb, nq, k, heap, runs, sec, nq / sec, pkg_s, dram_s);
 
     for (long long i = 0; i < nq; i++) {
         printf("Query index[%lld]\n", i);
